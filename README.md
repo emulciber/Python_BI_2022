@@ -6,6 +6,7 @@ Repository for Python course in BI
 This program works with nucleic acid sequences: DNA and RNA.
 
 Launch program:
+
     python nucl_acids.py
 
 Allowed commands:
