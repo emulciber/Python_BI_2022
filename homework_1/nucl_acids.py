@@ -7,7 +7,7 @@ rna_to_rna = {'A': 'U', 'a': 'u', 'U': 'A', 'u': 'a', 'G': 'C', 'g': 'c', 'C': '
 def check_sequence(seq):
     seq_check = seq.upper()
 
-    if seq_check.count('A') + seq_check.count('T') + seq_check.count('G') + seq_check.count('C') == len(seq_check):
+    if set(seq_check) <= {"A", "T", "G", "C"}:
         return 'DNA'
     elif seq_check.count('A') + seq_check.count('U') + seq_check.count('G') + seq_check.count('C') == len(seq_check):
         return 'RNA'
