@@ -22,7 +22,7 @@ def filter_length(read, length_bounds):
 
 def write_files(read, checkings, save_filtered, file_output_passed, file_output_failed):
     if checkings:
-        file_output_passed.write(''.join([string+'\n' for string in read]))
+        file_output_passed.writelines([string + '\n' for string in read])
     else:
         if save_filtered == True:
             file_output_failed.write(''.join([string+'\n' for string in read]))
