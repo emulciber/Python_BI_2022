@@ -2,7 +2,7 @@ def filter_gc(read, gc_bounds):
     if type(gc_bounds) != tuple:
         gc_bounds = (0, gc_bounds)
     read_gc = (read[1].count('G') + read[1].count('C')) / len(read[1]) * 100
-    return read_gc >= gc_bounds[0] and read_gc <= gc_bounds[1]
+    return gc_bounds[0] <= read_gc <= gc_bounds[1]
 
 
 def filter_quality(read, quality_treshold):
