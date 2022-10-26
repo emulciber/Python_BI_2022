@@ -55,7 +55,7 @@ def main(input_fastq,
         counter = 0
 
         for line in file_input:
-            read.append(line[:-1])
+            read.append(line.strip())
             counter += 1
 
             if counter == 4:
