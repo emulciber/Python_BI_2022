@@ -55,7 +55,7 @@ def multiple_partial(*funs, **kwargs):
     return partial_funs
 
 
-def my_print(*args, **kwargs):
+def print(*args, **kwargs):
     
     out_string = ''
 
