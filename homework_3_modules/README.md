@@ -26,7 +26,7 @@ Install python 3.11 and python3.11-venv (package for creating virtual environmen
 sudo apt-get install python3.11 python3.11-venv
 ~~~
 
-If you haven't already done so, go to folder with ultraviolence.py:
+If you haven't already done so, go to folder with ultraviolence.py (download it from this repository):
 ~~~
 cd <PATH_TO_FOLDER_WITH_ULTRAVIOLENCE>
 ~~~
@@ -42,7 +42,11 @@ Activate the virtual environment:
 source py11uv/bin/activate
 ~~~
 
-Install required packages:
+Install required packages from requirements.txt:
+~~~
+pip install -r requirements.txt
+~~~
+or do it manually:
 ~~~
 pip install beautifulsoup4 biopython lxml pandas==1.4
 ~~~
