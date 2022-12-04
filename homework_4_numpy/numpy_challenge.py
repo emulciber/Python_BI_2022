@@ -15,13 +15,11 @@ def multiplication_check(matrix_list):
 
 
 def multiply_matrices(matrix_list):
-    try:
+    if multiplication_check(matrix_list):
         last_matrix = matrix_list[0]
         for i in range(1, len(matrix_list)):
             last_matrix = last_matrix @ matrix_list[i]
         return last_matrix
-    except:
-        return None
 
 
 def compute_2d_distance(arr1, arr2):
