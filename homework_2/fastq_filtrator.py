@@ -47,6 +47,8 @@ def main(input_fastq,
     if save_filtered:
         file_output_failed_name = output_file_prefix + '_failed.fastq'
         file_output_failed = open(file_output_failed_name, 'w')
+    else:
+        file_output_failed = None
 
 
     with open(input_fastq) as file_input:
@@ -64,6 +66,6 @@ def main(input_fastq,
 
                 read = []
                 counter = 0
-    
-    file_output_failed.close()
+    if save_filtered:
+        file_output_failed.close()
     file_output_passed.close()
