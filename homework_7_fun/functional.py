@@ -34,10 +34,10 @@ def conditional_reduce(*funs):
 
 def func_chain(*funs):
     def inner_func(x):
-        ans = x
-        for fun in funs:
-            ans = fun(ans)
-        return ans
+        answer = x
+        for function in funs:
+            answer = function(answer)
+        return answer
     return inner_func
 
 
@@ -55,20 +55,19 @@ def multiple_partial(*funs, **kwargs):
     return partial_funs
 
 
-def print(*args, **kwargs):
+def print(*args, sep=' ', end='\n', file=False):
     
     out_string = ''
 
-    separator = kwargs['sep'] if 'sep' in kwargs.keys() else ' '
-    ending = kwargs['end'] if 'end' in kwargs.keys() else '\n'
-
     for arg in args:
-        out_string += str(arg) + separator
+        out_string += str(arg) + sep
 
-    out_string += ending
+    out_string += end
 
-    if 'file' in kwargs.keys():
-        kwargs['file'].write(out_string)
+    if file:
+        with open(file, 'w') as output_file:
+            output_file.write(out_string)
     else:
         sys.stdout.write(out_string)
 
+        
